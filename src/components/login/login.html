@@ -1,0 +1,15 @@
+<section class="login">
+  <form id="login" v-if="!logged">
+    <div class="form-group">
+        <input type="text" v-model="user" class="form-control" id="usuario" aria-describedby="emailHelp"
+            placeholder="Usuario" required>
+    </div>
+
+    <div class="form-group">
+        <input type="password" v-model="password" class="form-control" id="inputPassword"
+            placeholder="Contraseña" required>
+    </div>
+
+    <button v-on:click.prevent="ingresar" class="btn btn-primary">Ingresar</button>
+</form>
+</section>
