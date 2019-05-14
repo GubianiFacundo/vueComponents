@@ -1,0 +1,71 @@
+body, html { height: 100%; width: 100%; }
+
+.container-fluid {
+    height: 100%;
+    display: flex;
+}
+
+form {
+    padding: 20px;
+    min-width: 350px;
+    margin: auto;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(107,107,107,1);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(107,107,107,1);
+    box-shadow: 0px 0px 3px 0px rgba(107,107,107,1);
+}
+
+form * {
+    border-radius: 0 !important;
+}
+
+form > button {
+    width: 100%;
+}
+
+.center {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.pager {
+    text-align: RIGHT;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid grey;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.niceColor {
+    background-color: lightblue;
+}
+#detalles{
+    position: absolute;
+    top:0;
+}
+
+tr:hover {
+    cursor:pointer;
+    background-color: rgba(67, 151, 56, 0.671);
+}
+
+#falito{
+    font-size: 30px;
+}
+
+/* PÁGINA LINDA PARA DEJAR LINDAS LAS COSAS, NO SÉ HAY MUCHO RE VIOLENTO */
+/* https://www.webucator.com/how-to/how-style-table-with-css.cfm */

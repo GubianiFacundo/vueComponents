@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
 import login from './components/login/index.vue'
 import clientes from './components/clientes/index.vue'
 import detalleCliente from './components/detalleCliente/index.vue'
@@ -15,12 +14,20 @@ export default new Router({
       component: login
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/clientes',
+      name: 'clientes',
+      component: clientes,
+      props: true
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      //component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    },
+    {
+      path: '/clientes/:id',
+      name: 'detalleCliente',
+      component: detalleCliente,
+      props: true
     }
   ]
 })

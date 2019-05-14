@@ -1,5 +1,42 @@
-
 <section class="clientes">
-  <h1>clientes Component</h1>
-</section>
+  <div id="clientes" class="center">
+    <form style="display:inline-block">
+      <div id="busqueda" class="center2">
+        Search: <input type="text" @input="buscar(page, nombreFantasia)" 
+        v-model="nombreFantasia" placeholder="busca" id="busqueda"/>
+        <button class="btn btn-primary"> Buscar
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+      </div>
+    </form>
+    <!-- <div class="pager">
+      <a class="glyphicon glyphicon-arrow-left" v-if="hasPrevious" v-on:click="previous"></a>
+      <span class="badge num"> {{ paginaActual }} de {{ page.totalPages }}</span>
+      <a class="glyphicon glyphicon-arrow-right arrowRight" v-if="hasNext" v-on:click.prevent="next"></a>
+    </div> -->
 
+    <table class="myTable">
+      <thead>
+        <tr>
+          <th scope="col">ID Cliente</th>
+          <th scope="col">Razon Social</th>
+          <th scope="col">Nombre Fantasia</th>
+          <th scope="col">Domicilio</th>
+          <th scope="col">Localidad</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- v-bind:class="{selected: selectedClient === client}" -->
+        <tr class="niceColor" v-for="cliente in clientes" type="value" v-bind:value="nombreFantasia" v-on:click="detallarCliente(cliente.cliId)">
+          <td>{{ cliente.cliId }}</td>
+          <td>{{ cliente.razonSocial }}</td>
+          <td>{{ cliente.nombreFantasia }}</td>
+          <td>{{ (typeof cliente.domicilios!='undefined')?cliente.domicilios[0].domicilio : 'no domicilio' }}</td>
+          <td>{{ (typeof cliente.domicilios!='undefined')?cliente.domicilios[0].localidad.nombre : 'no localidad' }}</td>
+          <td>{{ cliente.email || 'no email' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
