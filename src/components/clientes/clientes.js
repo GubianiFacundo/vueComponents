@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 export default {
   name: 'clientes',
   components: {},
@@ -57,9 +58,8 @@ export default {
       this.paginaActual++;
       this.consultaClientes(this.paginaActual, this.nombreFantasia)
     },
-    detallarCliente: function (clienteId) {
-      alert("este botón funciona" + clienteId);
-      this.$router.push({name: "detalleCliente", params: {id: clienteId} });
+    detallarCliente: function (clientId) {
+      this.$router.push({name: "detalle", params: { id: clientId } });
       //detalles.detallar(cliente);
     }
   },

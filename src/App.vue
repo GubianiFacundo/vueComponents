@@ -1,3 +1,4 @@
+
 <template>
   <div id="app">
     <div id="nav">
@@ -8,6 +9,7 @@
 </template>
 
 <style lang="scss">
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,3 +28,10 @@
   }
 }
 </style>
+<script>
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+export default {
+  
+}
+</script>

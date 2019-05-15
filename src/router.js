@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import login from './components/login/index.vue'
 import clientes from './components/clientes/index.vue'
-import detalleCliente from './components/detalleCliente/index.vue'
+import detalle from './components/detalle/index.vue'
 
 Vue.use(Router)
 
@@ -25,8 +25,8 @@ export default new Router({
     },
     {
       path: '/clientes/:id',
-      name: 'detalleCliente',
-      component: detalleCliente,
+      name: 'detalle',
+      component: detalle,
       props: true
     }
   ]

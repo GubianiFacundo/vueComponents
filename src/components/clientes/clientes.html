@@ -1,19 +1,23 @@
 <section class="clientes">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <div id="clientes" class="center">
     <form style="display:inline-block">
       <div id="busqueda" class="center2">
-        Search: <input type="text" @input="buscar(page, nombreFantasia)" 
-        v-model="nombreFantasia" placeholder="busca" id="busqueda"/>
+        Search: <input type="text" @input="buscar(page, nombreFantasia)" v-model="nombreFantasia" placeholder="busca"
+          id="busqueda" />
         <button class="btn btn-primary"> Buscar
           <span class="glyphicon glyphicon-search"></span>
         </button>
       </div>
     </form>
-    <!-- <div class="pager">
-      <a class="glyphicon glyphicon-arrow-left" v-if="hasPrevious" v-on:click="previous"></a>
+    <div class="pager">
+      <a class="glyphicon glyphicon-arrow-left" style="color:black !important;" v-if="hasPrevious"
+        v-on:click="previous"></a>
       <span class="badge num"> {{ paginaActual }} de {{ page.totalPages }}</span>
-      <a class="glyphicon glyphicon-arrow-right arrowRight" v-if="hasNext" v-on:click.prevent="next"></a>
-    </div> -->
+      <a class="glyphicon glyphicon-arrow-right arrowRight" style="color:black !important;" v-if="hasNext"
+        v-on:click.prevent="next"></a>
+    </div>
 
     <table class="myTable">
       <thead>
@@ -28,12 +32,14 @@
       </thead>
       <tbody>
         <!-- v-bind:class="{selected: selectedClient === client}" -->
-        <tr class="niceColor" v-for="cliente in clientes" type="value" v-bind:value="nombreFantasia" v-on:click="detallarCliente(cliente.cliId)">
+        <tr class="niceColor" v-for="cliente in clientes" type="value" v-bind:value="nombreFantasia"
+          v-on:click="detallarCliente(cliente.cliId)">
           <td>{{ cliente.cliId }}</td>
           <td>{{ cliente.razonSocial }}</td>
           <td>{{ cliente.nombreFantasia }}</td>
           <td>{{ (typeof cliente.domicilios!='undefined')?cliente.domicilios[0].domicilio : 'no domicilio' }}</td>
-          <td>{{ (typeof cliente.domicilios!='undefined')?cliente.domicilios[0].localidad.nombre : 'no localidad' }}</td>
+          <td>{{ (typeof cliente.domicilios!='undefined')?cliente.domicilios[0].localidad.nombre : 'no localidad' }}
+          </td>
           <td>{{ cliente.email || 'no email' }}</td>
         </tr>
       </tbody>

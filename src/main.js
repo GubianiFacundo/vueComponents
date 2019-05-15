@@ -1,15 +1,15 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import 'bootstrap';
-import BootstrapVue from 'bootstrap-vue';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import './style.css';
 import vuex from 'vuex';
-import './style.css'
 
-Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
+Vue.config.productionTip = false;
+
 Vue.use(vuex);
 
 const store = new vuex.Store({
