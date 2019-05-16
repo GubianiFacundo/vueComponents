@@ -1,8 +1,12 @@
 import $ from 'jquery';
+import navbar from 'C:/Users/DESARROLLO/Desktop/VueProjectFacundo/vue-component/src/components/navbar/index.vue';
+// import navbar from './components/navbar/index.vue'
 
 export default {
   name: 'clientes',
-  components: {},
+  components: {
+    navbar
+  },
   props: [],
   data() {
     return {

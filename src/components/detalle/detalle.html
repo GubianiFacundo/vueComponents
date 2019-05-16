@@ -1,9 +1,10 @@
 <section class="detalle">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <div id="detalle" style="width: 100%">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <div id="detalle">
     <form>
-      <a class="glyphicon glyphicon-arrow-left" v-on:click="goBack"></a>
-      <div>
+      <i class="fas fa-angle-double-left miHover" v-on:click="goBack"></i>
+      <form>
         <h4>Id Cliente: {{ cliente.cliId }}</h4>
         <h4>Razón social: {{ cliente.razonSocial }}</h4>
         <h4>Nombre: {{ cliente.nombreFantasia }}</h4>
@@ -16,7 +17,7 @@
           {{ (typeof cliente.domicilios!='undefined')?cliente.domicilios[0].localidad.cod_pos : 'no cod pos'}}</h4>
         <h4>Email: {{ cliente.email || 'no email' }}</h4>
         <h4>Situación ante el iva: {{ cliente.sit_ante_iva_nombre}}</h4>
-      </div>
+        </form>
     </form>
   </div>
 </section>

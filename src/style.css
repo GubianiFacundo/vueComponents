@@ -1,5 +1,12 @@
 body, html { height: 100%; width: 100%; }
 
+.miHover:hover {
+    box-shadow: 0 0 0 4px rgba(255,255,255,1);
+	transition: background 0.2s, color 0.2s;
+    cursor:pointer;
+    background-color: rgba(46, 173, 146, 0.671);
+}
+
 .container-fluid {
     height: 100%;
     display: flex;

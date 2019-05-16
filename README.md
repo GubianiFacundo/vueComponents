@@ -1,4 +1,4 @@
-# vue-facu
+# vue-component
 
 ## Project setup
 ```
